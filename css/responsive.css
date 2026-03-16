@@ -1,0 +1,70 @@
+/* ============================================================
+   RESPONSIVE — mobile-first breakpoints
+   ============================================================ */
+
+@media (max-width: 900px) {
+  body { cursor: auto; }
+  #cursor, #cring { display: none; }
+
+  /* Nav */
+  nav { padding: 1rem 1.5rem; }
+  nav ul { display: none; }
+  .ncta { display: none; }
+  .hbg-btn { display: flex; }
+
+  /* Hero */
+  #hero { padding: 0 1.5rem; }
+  .hn  { font-size: clamp(3.2rem, 18vw, 5rem); }
+  .ht  { font-size: clamp(0.85rem, 4vw, 1.2rem); letter-spacing: 0.08em; }
+  .hd  { font-size: 0.9rem; }
+  .hbts { gap: 0.8rem; }
+  .bp, .bg2 { padding: 0.75rem 1.6rem; font-size: 0.7rem; }
+
+  /* Sections */
+  #about,
+  #skills,
+  #achievements,
+  #projects,
+  #experience,
+  #contact { padding: 4rem 1.5rem; }
+
+  /* About */
+  .ag { grid-template-columns: 1fr; gap: 2.5rem; }
+  .av { min-height: 260px; }
+  .aorb { width: 220px; height: 220px; }
+  .ai { font-size: 3.5rem; }
+  .sf:nth-child(2) { top: 0; right: 0; }
+  .sf:nth-child(3) { bottom: 0; left: 0; }
+  .sf:nth-child(4) { display: none; }
+
+  /* Skills */
+  .sg { grid-template-columns: 1fr; }
+
+  /* Achievements */
+  .sr { grid-template-columns: repeat(3, 1fr); }
+  .hg { grid-template-columns: 1fr; }
+
+  /* Projects */
+  .pg { grid-template-columns: 1fr; }
+
+  /* Experience */
+  .tl::before { left: 16px; }
+  .tld { width: 34px; height: 34px; font-size: 0.9rem; }
+  .tli { gap: 1rem; }
+
+  /* Contact */
+  .cg { grid-template-columns: 1fr; gap: 2.5rem; }
+  .fr { grid-template-columns: 1fr; }
+
+  /* Section headings */
+  .st { font-size: clamp(1.6rem, 7vw, 2.4rem); }
+
+  /* Footer */
+  footer { padding: 2rem 1.5rem; flex-direction: column; gap: 0.8rem; text-align: center; }
+}
+
+@media (max-width: 480px) {
+  .sr  { grid-template-columns: repeat(2, 1fr); }
+  .hbgs { gap: 0.5rem; }
+  .badge { font-size: 0.55rem; padding: 0.3rem 0.7rem; }
+}

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anmol Gupta — Full Stack Developer</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet"/>
+
+  <!-- Vendor CDN scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/base.css"/>
+  <link rel="stylesheet" href="css/loader-cursor.css"/>
+  <link rel="stylesheet" href="css/navbar.css"/>
+  <link rel="stylesheet" href="css/sections.css"/>
+  <link rel="stylesheet" href="css/responsive.css"/>
+</head>
+<body>
+
+  <!-- LOADER -->
+  <div id="ldr">
+    <div class="lname">ANMOL.G</div>
+    <div class="lbar"><div class="lbf" id="lbf"></div></div>
+    <div class="lpct" id="lpct">0%</div>
+  </div>
+
+  <div id="prog"></div>
+  <div id="cursor"></div>
+  <div id="cring"></div>
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- MOBILE DRAWER -->
+  <div id="mob-overlay"></div>
+  <div id="mob-menu">
+    <a href="#about"        class="mob-link">About</a>
+    <a href="#skills"       class="mob-link">Skills</a>
+    <a href="#achievements" class="mob-link">Achievements</a>
+    <a href="#projects"     class="mob-link">Projects</a>
+    <a href="#experience"   class="mob-link">Experience</a>
+    <a href="#contact"      class="mob-link mob-cta">Hire Me</a>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav id="nav">
+    <div class="nl">AG</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="ncta">Hire Me</a>
+    <button class="hbg-btn" id="hbg" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="heb" id="he">⟩ Welcome to my universe</div>
+    <h1 class="hn" id="hn">ANMOL<br/>GUPTA</h1>
+    <div class="ht" id="ht">Full Stack Developer <span>&amp;</span> AI/ML Engineer</div>
+    <p class="hd" id="hd">Building immersive web experiences and intelligent systems that push the boundaries of what's possible on the modern web.</p>
+    <div class="hbts" id="hbts">
+      <a href="#projects" class="bp">View My Work</a>
+      <a href="#contact"  class="bg2">Let's Connect</a>
+    </div>
+    <div class="hbgs" id="hbgs">
+      <span class="badge hot">8× Finalist</span>
+      <span class="badge hot">5× Winner</span>
+      <span class="badge">3× Organiser</span>
+      <span class="badge">2+ Yrs Freelance</span>
+      <span class="badge">AI/ML Specialist</span>
+    </div>
+    <div class="si"><div class="sa"></div><span>Scroll</span></div>
+  </section>
+
+  <div class="dv"></div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="ag">
+      <div class="av rv">
+        <div class="aorb"><div class="ai">AG</div></div>
+        <div class="sf"><div class="sn">100+</div><div class="sl2">Projects</div></div>
+        <div class="sf"><div class="sn">5×</div>  <div class="sl2">Winner</div></div>
+        <div class="sf"><div class="sn">2+</div>  <div class="sl2">Yrs Freelance</div></div>
+      </div>
+      <div class="at rv">
+        <div class="sl">About Me</div>
+        <h2 class="st">Crafting <span class="hl">Digital</span><br/>Realities</h2>
+        <p>Hi, I'm <strong>Anmol Gupta</strong> — a passionate Full Stack Developer and AI/ML enthusiast from India. I build immersive, cutting-edge web applications that blend stunning UI with intelligent backends.</p>
+        <p>With <strong>2+ years of freelance experience</strong>, I've delivered production-grade products from real-time SaaS to AI-powered tools. I specialise in experiences that don't just work — they <strong>wow</strong>.</p>
+        <p>When I'm not shipping code, I'm competing in hackathons — <strong>8× finalist, 5× winner</strong>, and organising events that energise India's tech community.</p>
+        <div class="tt">
+          <span class="ttag">React</span><span class="ttag">Next.js</span><span class="ttag">Node.js</span>
+          <span class="ttag">Python</span><span class="ttag">Three.js</span><span class="ttag">TensorFlow</span>
+          <span class="ttag">MongoDB</span><span class="ttag">PostgreSQL</span><span class="ttag">Docker</span><span class="ttag">AWS</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="dv"></div>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="sl rv">Technical Arsenal</div>
+    <h2 class="st rv">My <span class="hl">Toolbox</span> &amp; Expertise</h2>
+    <div class="sg">
+      <div class="skc rv" data-level="0.95"><div class="skie">⚛️</div><div class="skn">React / Next.js</div><div class="skl">Expert — 95%</div><div class="skb"><div class="skbf"></div></div><div class="sktg"><span>Hooks</span><span>SSR</span><span>App Router</span><span>Redux</span></div></div>
+      <div class="skc rv" data-level="0.9"> <div class="skie">🟢</div><div class="skn">Node.js / Express</div><div class="skl">Expert — 90%</div><div class="skb"><div class="skbf"></div></div><div class="sktg"><span>REST</span><span>GraphQL</span><span>WebSockets</span><span>JWT</span></div></div>
+      <div class="skc rv" data-level="0.88"><div class="skie">🐍</div><div class="skn">Python / AI-ML</div><div class="skl">Advanced — 88%</div><div class="skb"><div class="skbf"></div></div><div class="sktg"><span>TensorFlow</span><span>PyTorch</span><span>FastAPI</span><span>NLP</span></div></div>
+      <div class="skc rv" data-level="0.82"><div class="skie">🌐</div><div class="skn">Three.js / WebGL</div><div class="skl">Advanced — 82%</div><div class="skb"><div class="skbf"></div></div><div class="sktg"><span>GLSL</span><span>Shaders</span><span>GSAP</span><span>R3F</span></div></div>
+      <div class="skc rv" data-level="0.85"><div class="skie">🗄️</div><div class="skn">Databases</div><div class="skl">Advanced — 85%</div><div class="skb"><div class="skbf"></div></div><div class="sktg"><span>MongoDB</span><span>PostgreSQL</span><span>Redis</span><span>Prisma</span></div></div>
+      <div class="skc rv" data-level="0.80"><div class="skie">☁️</div><div class="skn">DevOps / Cloud</div><div class="skl">Proficient — 80%</div><div class="skb"><div class="skbf"></div></div><div class="sktg"><span>AWS</span><span>Docker</span><span>CI/CD</span><span>Vercel</span></div></div>
+    </div>
+  </section>
+
+  <div class="dv"></div>
+
+  <!-- ACHIEVEMENTS -->
+  <section id="achievements">
+    <div class="sl rv">Hall of Fame</div>
+    <h2 class="st rv"><span class="hl">Achievements</span> &amp; Milestones</h2>
+    <div class="sr">
+      <div class="stc rv"><div class="bn">8×</div>  <div class="bl">Hackathon Finalist</div></div>
+      <div class="stc rv"><div class="bn">5×</div>  <div class="bl">Hackathon Winner</div></div>
+      <div class="stc rv"><div class="bn">3×</div>  <div class="bl">Event Organiser</div></div>
+      <div class="stc rv"><div class="bn">2+</div>  <div class="bl">Yrs Freelance</div></div>
+      <div class="stc rv"><div class="bn">100+</div><div class="bl">Projects Shipped</div></div>
+    </div>
+    <div class="sl rv" style="margin-bottom:1.2rem;">Hackathon Trail</div>
+    <div class="hg">
+      <div class="hi rv"><div class="hic">🏆</div><div><div class="hin">Smart India Hackathon 2023</div> <div class="hir w">🥇 Winner</div></div></div>
+      <div class="hi rv"><div class="hic">🏆</div><div><div class="hin">HackWithInfy 2023</div>          <div class="hir w">🥇 Winner</div></div></div>
+      <div class="hi rv"><div class="hic">🏆</div><div><div class="hin">MLH HackNITR</div>               <div class="hir w">🥇 Winner</div></div></div>
+      <div class="hi rv"><div class="hic">🏆</div><div><div class="hin">Hack This Fall 2023</div>        <div class="hir w">🥇 Winner</div></div></div>
+      <div class="hi rv"><div class="hic">🏆</div><div><div class="hin">CodeRush National Hackathon</div><div class="hir w">🥇 Winner</div></div></div>
+      <div class="hi rv"><div class="hic">🎯</div><div><div class="hin">DevFest Hackathon — Google</div> <div class="hir f">Top Finalist</div></div></div>
+      <div class="hi rv"><div class="hic">🎯</div><div><div class="hin">HackAI — Microsoft</div>         <div class="hir f">Top Finalist</div></div></div>
+      <div class="hi rv"><div class="hic">🎯</div><div><div class="hin">Ideathon 2.0 — IIT Delhi</div>  <div class="hir f">Top Finalist</div></div></div>
+      <div class="hi rv"><div class="hic">🔧</div><div><div class="hin">TechFest Hackathon — BITS</div>  <div class="hir o">🛠 Organiser</div></div></div>
+      <div class="hi rv"><div class="hic">🔧</div><div><div class="hin">HackJunction India Chapter</div> <div class="hir o">🛠 Organiser</div></div></div>
+    </div>
+    <div class="awb rv">🏅 <strong>Best AI Project Award 2023</strong> &nbsp;·&nbsp; 🌟 <strong>Top 10 Talent in Tech</strong> — recognised for outstanding contributions in AI/ML development and open-source community building across India's tech ecosystem.</div>
+  </section>
+
+  <div class="dv"></div>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="sl rv">Selected Work</div>
+    <h2 class="st rv">Featured <span class="hl">Projects</span></h2>
+    <div class="pg">
+      <div class="pc rv"><div class="pn">01 / SAAS</div><div class="pt">NeuralFlow AI</div><p class="pd">Full-stack AI SaaS platform with real-time inference, billing, and analytics dashboard. Processes 10k+ queries/day.</p><div class="ps"><span>Next.js</span><span>Python</span><span>OpenAI</span><span>Stripe</span><span>PostgreSQL</span></div><a href="https://github.com/Anm0lGupta" class="pl" target="_blank">View on GitHub →</a></div>
+      <div class="pc rv"><div class="pn">02 / 3D WEB</div><div class="pt">MetaVerse Hub</div><p class="pd">3D immersive virtual space built with Three.js and WebGL. Users create, explore, and trade NFT-backed virtual assets.</p><div class="ps"><span>Three.js</span><span>React</span><span>Solidity</span><span>IPFS</span></div><a href="https://github.com/Anm0lGupta" class="pl" target="_blank">View on GitHub →</a></div>
+      <div class="pc rv"><div class="pn">03 / ML</div><div class="pt">VisionAI Detector</div><p class="pd">Real-time object detection using custom-trained YOLO models. 94% accuracy on production datasets.</p><div class="ps"><span>Python</span><span>PyTorch</span><span>FastAPI</span><span>OpenCV</span><span>Docker</span></div><a href="https://github.com/Anm0lGupta" class="pl" target="_blank">View on GitHub →</a></div>
+      <div class="pc rv"><div class="pn">04 / COLLAB</div><div class="pt">CollabSpace</div><p class="pd">Real-time collaborative workspace with live cursors, video calls, kanban boards, and AI writing assistant. 500+ users.</p><div class="ps"><span>Next.js</span><span>Socket.io</span><span>WebRTC</span><span>Redis</span></div><a href="https://github.com/Anm0lGupta" class="pl" target="_blank">View on GitHub →</a></div>
+      <div class="pc rv"><div class="pn">05 / MOBILE</div><div class="pt">FinTrack Pro</div><p class="pd">AI-powered finance tracker with smart expense categorisation, investment insights, and predictive budget analytics.</p><div class="ps"><span>React Native</span><span>Node.js</span><span>TensorFlow.js</span><span>MongoDB</span></div><a href="https://github.com/Anm0lGupta" class="pl" target="_blank">View on GitHub →</a></div>
+      <div class="pc rv"><div class="pn">06 / DEVTOOL</div><div class="pt">CodeMind IDE</div><p class="pd">Browser-based IDE with AI code completion, live collaboration, and one-click deploy. Supports 15+ languages.</p><div class="ps"><span>React</span><span>Monaco Editor</span><span>OpenAI</span><span>AWS Lambda</span></div><a href="https://github.com/Anm0lGupta" class="pl" target="_blank">View on GitHub →</a></div>
+    </div>
+  </section>
+
+  <div class="dv"></div>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="sl rv">Career Path</div>
+    <h2 class="st rv">Work <span class="hl">Experience</span></h2>
+    <div class="tl">
+      <div class="tli" id="t1">
+        <div class="tld">💼</div>
+        <div class="tlb">
+          <div class="tldt">2024 — 2026</div>
+          <div class="tlr">Senior Freelance Full Stack Developer</div>
+          <div class="tlco">Self-Employed · Remote · Global Clients</div>
+          <div class="tldesc">Delivering end-to-end web solutions for startups and enterprises. Specialising in AI-integrated web apps, SaaS products, and 3D interactive experiences. 50+ successful projects across US, UK, and EU markets.</div>
+        </div>
+      </div>
+      <div class="tli" id="t2">
+        <div class="tld">🤖</div>
+        <div class="tlb">
+          <div class="tldt">2023 — 2024</div>
+          <div class="tlr">AI/ML Developer (Contract)</div>
+          <div class="tlco">Multiple Startups · Remote</div>
+          <div class="tldesc">Built and deployed ML models for computer vision, NLP, and recommendation systems. Reduced inference latency by 40% through model optimisation and efficient deployment pipelines.</div>
+        </div>
+      </div>
+      <div class="tli" id="t3">
+        <div class="tld">🚀</div>
+        <div class="tlb">
+          <div class="tldt">2023</div>
+          <div class="tlr">Full Stack Developer (Freelance)</div>
+          <div class="tlco">Freelancer.com · Upwork</div>
+          <div class="tldesc">Started freelancing journey building web apps for small businesses. Delivered e-commerce platforms, portfolios, and CMS solutions. Maintained 5-star rating with 98% client satisfaction.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="dv"></div>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="sl rv">Let's Build Together</div>
+    <h2 class="st rv">Get In <span class="hl">Touch</span></h2>
+    <div class="cg">
+      <div class="ci rv">
+        <h3>Ready to launch your next project?</h3>
+        <p>Whether it's a sleek SaaS product, an AI-powered platform, or an immersive 3D experience — I'm here to turn ideas into reality. Let's create something extraordinary.</p>
+        <a href="tel:+918076772278"                          class="cit"><div class="cii">📞</div><div><div class="cil">Phone</div>   <div class="civ">+91 8076772278</div></div></a>
+        <a href="mailto:anmol.8.gupta@gmail.com"             class="cit"><div class="cii">✉️</div><div><div class="cil">Email</div>   <div class="civ">anmol.8.gupta@gmail.com</div></div></a>
+        <a href="https://www.linkedin.com/in/AnmolGupta" target="_blank" class="cit"><div class="cii">💼</div><div><div class="cil">LinkedIn</div><div class="civ">linkedin.com/in/AnmolGupta</div></div></a>
+        <a href="https://github.com/Anm0lGupta"          target="_blank" class="cit"><div class="cii">🐙</div><div><div class="cil">GitHub</div>  <div class="civ">github.com/Anm0lGupta</div></div></a>
+      </div>
+      <div class="rv">
+        <form class="cf" id="cf">
+          <div class="fr">
+            <div class="fg"><label>Your Name</label>    <input type="text"  name="from_name"  placeholder="John Doe"         required/></div>
+            <div class="fg"><label>Email Address</label><input type="email" name="from_email" placeholder="john@example.com" required/></div>
+          </div>
+          <div class="fg"><label>Subject</label>          <input type="text" name="subject" placeholder="Project Inquiry"    required/></div>
+          <div class="fg"><label>Budget (optional)</label><input type="text" name="budget"  placeholder="e.g. $500–$2000"/></div>
+          <div class="fg"><label>Message</label><textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea></div>
+          <button type="submit" id="fs">Send Message ⟶</button>
+          <div id="fst"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="fl">ANMOL.G</div>
+    <div>Built with ❤️ &amp; Three.js · © 2026 Anmol Gupta</div>
+    <div style="font-size:.58rem;color:var(--m)">Full Stack · AI/ML · Freelancer</div>
+  </footer>
+
+  <!-- Entry point — ES module -->
+  <script type="module" src="js/main.js"></script>
+
+</body>
+</html>

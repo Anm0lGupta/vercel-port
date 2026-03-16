@@ -1,0 +1,115 @@
+/* ============================================================
+   BASE — CSS variables, reset, global typography
+   ============================================================ */
+
+:root {
+  --bg:    #02010a;
+  --s:     rgba(255, 255, 255, 0.03);
+  --b:     rgba(100, 180, 255, 0.15);
+  --a:     #00d4ff;
+  --a2:    #7c3aed;
+  --a3:    #ff6b35;
+  --t:     #e8f4fd;
+  --m:     #6b8fa8;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--t);
+  font-family: 'Syne', sans-serif;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* Noise overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 1;
+}
+
+section {
+  position: relative;
+  z-index: 2;
+}
+
+/* Shared section heading atoms */
+.sl {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--a);
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.sl::before {
+  content: '';
+  width: 30px;
+  height: 1px;
+  background: var(--a);
+}
+
+.st {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.1;
+  margin-bottom: 1.2rem;
+}
+.st .hl {
+  background: linear-gradient(135deg, var(--a), var(--a2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Shared divider */
+.dv {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--b), transparent);
+  position: relative;
+  z-index: 2;
+}
+
+/* Scroll reveal utility */
+.rv {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s, transform 0.8s;
+  will-change: opacity, transform;
+}
+.rv.vs {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Scroll progress bar */
+#prog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--a), var(--a2));
+  z-index: 1000;
+  width: 0%;
+  transition: width 0.1s;
+}
